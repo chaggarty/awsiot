@@ -29,7 +29,7 @@ var params = {
   thingTypeName: iotThingType
 };
 iot.createThing(params, function(err, data) {
-  if (err) console.log(err, err.stack);
+  if (err) console.log(err, err.message);
   // an error occurred
   else
     console.log(
@@ -96,9 +96,20 @@ iot.createCertificateFromCsr(params, function(err, data) {
     // an error occurred
     else
       console.log(
-        "below is the newly created certificate, based off of the CSR, pem data:",
-        "\n",
-        data.certificateDescription.certificatePem
+        "successfully created certificate off of CSR, saving to disk...",
+        "\n"
       ); // successful response
+    const fs = require("fs");
+    fs.writeFile(
+      "./awsiotcertificate.pem",
+      data.certificateDescription.certificatePem,
+      function(err) {
+        if (err) {
+          return console.log(err);
+        }
+
+        console.log("The file was saved!");
+      }
+    );
   });
 });
