@@ -5,11 +5,11 @@ var iot = new AWS.Iot();
 
 // Defining Variables
 
-var iotThing = "Room21bProjector";
-var iotThingType = "PVS401D";
-var iotModel = "PVS401D";
-var iotPartNumber = "42-308-03";
-var iotTenantId = "7134258834";
+var iotThing = "Room21bProjector"; 
+var iotThingType = "PVS401D"; //This type needs to already exist in AWS IOT
+var iotModel = "PVS401D"; //This is an attribute for the thing type, no spaces, alphanumeric
+var iotPartNumber = "42-308-03"; //This is an attribute for the thing type, no spaces, alphanumeric
+var iotTenantId = "7134258834"; //This is an attribute for the thing type, no spaces, alphanumeric
 var iotCsr =
   "MIICpDCCAYwCAQAwXzELMAkGA1UEBhMCVVMxCzAJBgNVBAgMAldJMRAwDgYDVQQHDAdNYWRpc29uMRIwEAYDVQQKDAlDb25kb3JMTEMxCzAJBgNVBAsMAklUMRAwDgYDVQQDDAc3Mzg5MzQ4MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAs007Zscq1IHOQcqS5GNG5dESpuSZHFfu3+jmL9NDL6lCxkzkidQptjjYs0E1666iRR8PHlqiQs6tPJ8C8mAdb09SOeYXTlvmI3Js8kd27oCZnndOHtnx9ffnPV7zme613T0q6cV/F/Js6Kg9A+KamURN5W3v+e8+XDNEtPlb1zy2+81yL9QFzozqbhJJcb7XuyHKhVFSeYO3fNGPShK8ohqJ+iNxhs63R9zZUtRzVbAkyRaJA3b8iGA1ZFWC6yozlpWR0xpPl/g6T1oIped9Dh2Pe6CoN3EPTLDJ2tW8leGFansdCWCt1k4xe2h4RhdMGLESX9q9BBuGaQVqoMFMUwIDAQABoAAwDQYJKoZIhvcNAQELBQADggEBACiYCdMnnRRFElpm75TKDaIHP/RM+ZULCU9DebOw59I54AN5sYRAIT8W8IrIlqUwq5Il30BXIRtCskJH0tvNA/EsFWtKQoQWspLn9MIX9yPO8APeQ8ucOEmjycy8Gw/UnmzmLLle9ddJYCW+DZO4f1BUsPo5FyL3U8ETQ7COCUiTGvAm/xwm4sXltqR3BvWkMMWdituHgphMNhHSdG1/y6xn1VtFfQ+oLGC5iaeBDi0jVBLIggw7ro6oxE2nmgQQklT+ySyR2Dp8T//8/PSM/wZYRrWYMzXe8CqUmQYSBXo1tyZwggHzIYEdYRwGl+ybx5jO/5O59oRTtcMcwXtu/+Q=";
 var iotPolicy = "AllowAll";
